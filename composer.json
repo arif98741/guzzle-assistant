@@ -1,0 +1,30 @@
+{
+    "name": "xenon/guzzle-assistant",
+    "description": "This is simplified and modified version for sending http request using guzzle http client",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ariful islam",
+            "email": "arif98741@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3|^7.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Xenon\\GuzzleAssistant\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Xenon\\GuzzleAssistant\\LaravelBDSmsServiceProvider"
+            ],
+            "aliases": {
+                "SMS": "Xenon\\LaravelBDSms\\Facades\\SMS"
+            }
+        }
+    }
+}
